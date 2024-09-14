@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react
 const App = () => {
   return (
     <View style={styles.container}>
-      <ImageBackground source={{uri: './assets/fondo-inicio1'}} style={styles.backgroundImage}>
+      <ImageBackground source={{uri: '../assets/fondo-inicio1.jpg'}} style={styles.ImageBackground}>
         <Text style={styles.title}>VICINO</Text>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Iniciar sesión</Text>
