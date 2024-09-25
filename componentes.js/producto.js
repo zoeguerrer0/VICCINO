@@ -1,0 +1,1 @@
+/*en este pongo un ejemplo de cod para las tarjetas desplegables de los productos */

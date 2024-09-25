@@ -1,3 +1,6 @@
+import React from 'react';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
+
 const inicio =()=>{
     return (
         <View style={styles.container}>

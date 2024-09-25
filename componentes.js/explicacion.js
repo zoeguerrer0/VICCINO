@@ -1,0 +1,3 @@
+/* en esta carpeta 
+agregamos codificamos los componentes que 
+vaya a utilizar cada uno*/
