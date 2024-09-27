@@ -1,7 +1,9 @@
 export function carrito() {
 	return (
-		<div>
-			<h1>Hola Mundo!</h1>
-		</div>
+		<view>
+			<text>
+				holaa, este es el carrito
+			</text>
+		</view>
 	);
 };
