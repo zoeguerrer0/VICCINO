@@ -3,9 +3,10 @@ import { View,Text,StyleSheet,TouchableOpacity, } from "react-native-web";
 import {createBottomTabNavigatior} from "@react-navigation/bottom-tabs";
 import { Navigation } from "react-native-screens";
 
+
 //importando-pantallas
 import vicino from "./screens/vicino"; 
-import usuario from "./screens/usuario";
+import usuario from "./screens/usuario.js";
 import  carrito from "./screens/carrito.js";
  const Tab = createBottomTabNavigatior();
  function botonesTab(){ //en esta funcion le asignamos la ruta a cada botón.
