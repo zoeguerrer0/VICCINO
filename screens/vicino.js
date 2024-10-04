@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text,backgroundColor, View, ImageBackground, TouchableOpacity } from 'react-native';
 
-export function Vicino() {
+export default function () {
             return (
                <View>
                 <Text>

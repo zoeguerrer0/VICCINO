@@ -10,7 +10,6 @@ import carrito from "./screens/carrito";
 
 // Crea el Tab Navigator
 const Tab = createBottomTabNavigator();
-
 export default function BotonesTab() {
     return (
         <NavigationContainer>

@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
-import Navigation from './navegacion.js';
+import Navegacion from './navegacion.js';
+import Usuario from './screens/usuario.js';
 
-const App = () => {  
-};
-export default function App(){
+export default function App () {  
+
     return(
-        <Navigation/>
+        <Navegacion/>
     );
-}
-export {default as carrusel} from './componentes.js';
+};
 
 
