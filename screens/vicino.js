@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text,backgroundColor, View, ImageBackground, TouchableOpacity } from 'react-native';
+import Stack from "../navegacion";
 
 export default function () {
             return (

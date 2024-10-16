@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
-import Navegacion from './navegacion.js';
-import Usuario from './screens/usuario.js';
-import producto from "./componentes.js/producto.js";
-import ModalComponent from './componentes.js/ComponenteModal.js';
-export default function App () {  
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import Inicio from './screens/inicio1';
+import Envio from './screens/envío'
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Inicio />
+      <Envio/>
+    </View>
+  );
+}
 
-    return(
-       <View>
-            <producto/>
-            <ModalComponent/>
-       </View>
-    
-    );
-};
-
-
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

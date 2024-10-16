@@ -2,11 +2,12 @@
 import React from 'react';
 import {View, Text, FlatList,Image,StyleSheet} from 
 'react-native';
-export function Productos() {
-            return (
-                <div>
-                    <h1>Hola Mundo!</h1>
-                </div>
-            );
-        };
-        
+
+     const Products =()=>{
+        const Productos=[
+            {
+                id:1,
+                productName:""
+            }
+        ]
+     }  

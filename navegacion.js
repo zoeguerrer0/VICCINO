@@ -1,49 +1,20 @@
-import React from "react";
-import { View,Text,StyleSheet,TouchableOpacity, } from "react-native-web";
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import { Navigation } from "react-native-screens";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import envío from './screens/envío'
+import inicio  from './screens/inicio1';
 
+const Stack = createNativeStackNavigator();
 
-//importando-pantallas
-import vicino from "./screens/vicino.js/index.js"; //sería el home de la app
-import usuario from "./screens/usuario.js";
-import  carrito from "./screens/carrito.js";
+const Nab = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="inicio1">
+        <Stack.Screen name="inicio" component={inicio} options={{ title: 'inicio' }} />
+        <Stack.Screen name="envío" component={envío} options={{ title: 'Envío' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
-const stackNavigatior =createNativeStackNavigator (); 
-
-export default function stack(){
-    return (
-              <NavigationContainer>
-                    <Stack.Navigator initialRouteName ="vicino"/>
-
-                    <Stack.Screen name="home" component={vicino} />
-
-
-                    <stackNavigatior.Screen
-                        name="usuario"
-                        component={usuario}        
-                    />
-                    <stackNavigatior.screen name="carrito" component={carrito} />
-              </NavigationContainer>
-    )
-}
-
-const Tab = createBottomTabNavigator();
- function botonesTab(){ //en esta funcion le asignamos la ruta a cada botón.
-    return(
-        <Tab.Navigator>
-            <Tab.Screen name="carrito" componente={carrito}/>
-            <Tab.Screen name="usuario" componente={usuario}/>
-            <Tab.Screen name="vicino" componente={vicino}/>
-        </Tab.Navigator>
-    )
- }
- export default function Navigation(){//consultar pq no anda
-    return(
-        <NavigationContainer> 
-         <botonesTab/>
-        </NavigationContainer>
-    )
- }
+export default Nab;
