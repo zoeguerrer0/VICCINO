@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
 
@@ -23,59 +24,26 @@ const App = () => {
           <Text style={styles.buttonText}>Registrarse</Text>
         </TouchableOpacity>
       </ImageBackground>
+    <View/>
+=======
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import Inicio from './screens/inicio1';
+import Envio from './screens/envío'
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Inicio />
+      <Envio/>
+>>>>>>> ee2d36e727030093a623dc194026977ebf5b129d
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
-  },
-  title: {
-    fontSize: 48,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginVertical: 80,
-  },
-  button: {
-    backgroundColor: '#E8C488',
-    borderRadius: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 40,
-    marginVertical: 10,
-  },
-  buttonText: {
-    fontSize: 20,
-    textAlign: 'center',
-    alignItems: 'center',
-  },
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
-  },
-  title: {
-    fontSize: 48,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginVertical: 80,
-  },
-  button: {
-    backgroundColor: '#E8C488',
-    borderRadius: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 40,
-    marginVertical: 10,
-  },
-  buttonText: {
-    fontSize: 20,
-    textAlign: 'center',
   },
 });
-
-export default App;
