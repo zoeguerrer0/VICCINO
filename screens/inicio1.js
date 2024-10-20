@@ -7,16 +7,18 @@ export default function Inicio() {
       source={require('../assets/fondo-inicio.png')}
       style={styles.background}
       >
-        <Text style={styles.Text}>
-          VICINO
-        </Text>
-      <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')} >
-        <Text style={styles.buttonText}>Iniciar Sesión</Text>
-      </TouchableOpacity>
-      
-      <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')}>
-        <Text style={styles.buttonText}>Registrarse</Text>
-      </TouchableOpacity>
+        <View style={styles.container} >
+          <Text style={styles.Text}>
+            VICINO
+          </Text>
+        <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')} >
+          <Text style={styles.buttonText}>Iniciar Sesión</Text>
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')}>
+          <Text style={styles.buttonText}>Registrarse</Text>
+        </TouchableOpacity>
+        </View>
       </ImageBackground>
   );
 }
@@ -25,6 +27,11 @@ const styles = StyleSheet.create({
   background:{
     flex:1,
     reziceMode:'cover',
+    marginLeftft:'40%',
+    marginRight:'30%',
+    marginTop:'20px',
+    padding:'280px',
+
 
   },
   container: {

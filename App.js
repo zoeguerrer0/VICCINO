@@ -1,14 +1,18 @@
 
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet,ScrollView } from "react-native";
 import Inicio from './screens/inicio1';
-import Envio from './screens/envío'
+import Envio from './screens/envío';
+import ModalComponent from "./src/componentes/ComponenteModal";
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Inicio />
-      <Envio/>
-    </View>
+  return (  
+    <ScrollView>
+      <View style={styles.container}>
+        <Inicio />
+        <Envio/>
+        <ModalComponent/>
+      </View>
+    </ScrollView>
   );
 }
 

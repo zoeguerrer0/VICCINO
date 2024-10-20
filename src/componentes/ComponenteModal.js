@@ -4,7 +4,12 @@ import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
 const ModalComponent = () => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
-    <View style={styles.centeredView}>
+    <View >
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => setModalVisible(true)}>
+        <Text style={styles.carritoIcon}>🛒</Text>
+      </Pressable>
       <Modal
         animationType="slide"
         transparent={true}
@@ -15,66 +20,67 @@ const ModalComponent = () => {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
-            <Pressable
+             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}>
               <Text style={styles.textStyle}>Hide Modal</Text>
             </Pressable>
+            <Text style={styles.modalText}>Hello World!</Text>
+           
           </View>
         </View>
       </Modal>
-      <Pressable
-        style={[styles.button, styles.buttonOpen]}
-        onPress={() => setModalVisible(true)}>
-        <Text style={styles.textStyle}>Show Modal</Text>
-      </Pressable>
+      
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  centeredView: {
+const styles= StyleSheet.create({
+  centeredView:{
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
+    justifyContent:"flex-end",
+    alignItems:"center",
+    marginTop:22,
   },
   modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
+    backgroundColor:"white",
+    borderTopLeftRadius:20,
+    borderTopRightRadius:20,
+    padding:35,
+    alignItems:"center",
+    shadowColor:"#000",
+    ShadowOffset:{
+      width:0,
+      height:2,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
+    shadowOpacity:0.25,
+    shadowRadius:4,
+    elevation:5,
+    width:"100",
   },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
+  buttonClose:{
+    backgroundColor:"#111111",
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
+  textStyle:{
+    fontWeight:"bold",
+    textAlign:"center",
   },
-  buttonClose: {
-    backgroundColor: '#2196F3',
+  modalText:{
+    marginBottom:15,
+    fontSize:22,
+    fontWeight:"bold",
   },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
+  modalButton:{
+    position:"fixed",
+    bottom:30,
+    left:150,
+    backgroundColor:"#111111",
+    padding:10,
+    borderRadius:30,
   },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
+  carritoIcon:{
+    fontSize:20,
   },
-});
+})
 
 export default ModalComponent;
