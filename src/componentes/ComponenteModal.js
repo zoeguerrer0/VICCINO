@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
-import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
+import { Modal, StyleSheet, Text, Pressable, View} from 'react-native';
 
 const ModalComponent = () => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View >
       <Pressable
-        style={[styles.button, styles.buttonOpen]}
-        onPress={() => setModalVisible(true)}>
+        style={[styles.button, styles.buttonOpen]}  onPress={() => setModalVisible(true)}>
         <Text style={styles.carritoIcon}>🛒</Text>
       </Pressable>
       <Modal
@@ -15,7 +14,6 @@ const ModalComponent = () => {
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
           setModalVisible(!modalVisible);
         }}>
         <View style={styles.centeredView}>
@@ -23,9 +21,9 @@ const ModalComponent = () => {
              <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}>
-              <Text style={styles.textStyle}>Hide Modal</Text>
+              <Text style={styles.closeIcon}>❌</Text>
             </Pressable>
-            <Text style={styles.modalText}>Hello World!</Text>
+            <Text style={styles.modalText}>para inrgesar al carrito</Text>
            
           </View>
         </View>
@@ -46,7 +44,8 @@ const styles= StyleSheet.create({
     backgroundColor:"white",
     borderTopLeftRadius:20,
     borderTopRightRadius:20,
-    padding:35,
+    padding:40,
+    marginBottom:100,
     alignItems:"center",
     shadowColor:"#000",
     ShadowOffset:{
@@ -59,11 +58,10 @@ const styles= StyleSheet.create({
     width:"100",
   },
   buttonClose:{
-    backgroundColor:"#111111",
-  },
-  textStyle:{
-    fontWeight:"bold",
-    textAlign:"center",
+    backgroundColor:"#0011",
+  }, 
+  closeIcon:{
+    fontSize:20,
   },
   modalText:{
     marginBottom:15,
@@ -75,11 +73,11 @@ const styles= StyleSheet.create({
     bottom:30,
     left:150,
     backgroundColor:"#111111",
-    padding:10,
+    padding:20,
     borderRadius:30,
   },
   carritoIcon:{
-    fontSize:20,
+    fontSize:30,
   },
 })
 
