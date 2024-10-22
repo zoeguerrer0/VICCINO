@@ -41,8 +41,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#D2B48C',
-    padding: 5,
-    marginBottom:'auto',
+    height:"1090",
+    width:"860",
+    alignItems:'center',
+    justifyContent:"center",
+
   },
   navBar: {
     flexDirection: 'row',
@@ -77,12 +80,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     marginVertical: 10,
+    margin:15,
   },
   nextButton: {
     backgroundColor: '#6F4E37',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
+    margin:30,
   },
   nextButtonText: {
     color: '#fff',

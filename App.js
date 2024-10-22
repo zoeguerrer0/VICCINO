@@ -8,9 +8,15 @@ export default function App() {
   return (  
     <ScrollView>
       <View style={styles.container}>
-        <Inicio />
-        <Envio/>
-        <ModalComponent/>
+        <View style={styles.item}>
+          <Inicio /> 
+        </View>
+        <View style={styles.item}>
+          <Envio/>
+        </View>
+        <View style={styles.item}>
+          <ModalComponent/>
+       </View>
       </View>
     </ScrollView>
   );
@@ -21,5 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    
+
+  }
 });

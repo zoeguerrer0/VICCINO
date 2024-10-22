@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, ImageBackground, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, ImageBackground, Text, View, TouchableOpacity,Dimensions } from 'react-native';
 
+
+const {width,Height} =Dimensions.get('window');
 export default function Inicio() {
   return (
     <ImageBackground
@@ -26,19 +28,16 @@ export default function Inicio() {
 const styles = StyleSheet.create({
   background:{
     flex:1,
-    reziceMode:'cover',
-    marginLeftft:'40%',
-    marginRight:'30%',
-    marginTop:'20px',
-    padding:'280px',
-
-
+    justifyContent:'center',
+    padding:10,
+    margin:10,
+    marginTop:20,
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding:'auto',
+
     },
   button: {
     backgroundColor: '#6F4E37',
@@ -48,6 +47,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: '80%',
     alignItems: 'center',
+    marginLeft:200,
   },
   buttonText: {
     color: '#FFF',
@@ -56,7 +56,9 @@ const styles = StyleSheet.create({
   Text:{
     color: '#000000', // Texto principal negro
     fontSize: 30,
+    marginTop:300,
     letterSpacing: 4,
+    marginLeft:250,
   }
 
 });
