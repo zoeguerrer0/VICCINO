@@ -1,33 +1,75 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
+import { View, Text, TouchableOpacity, ScrollView,StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; // O cualquier otra biblioteca de iconos
 
-function HomeScreen() {
+const Usuarios = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+    <ScrollView >
+      <View style={styles.container} >
+        <Text style={styles.Text_mayusculas}> VICINO</Text>
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+        <Text style={styles.Text_normal}>Alejandra Maldonado</Text>
 
-const Tab = createBottomTabNavigator();
+        <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', padding: 15 }}>
+          <Text style={{ flex: 1 }}>Nivel: 3</Text>
+          <Ionicons name="chevron-forward" size={24} color="gray" />
+        </TouchableOpacity>
 
-export default function Tabs() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+        {/* Resto de las opciones con la misma estructura */}
+
+        <TouchableOpacity>
+        <Text style={{ marginLeft: 10 }}>compras</Text>
+             <Ionicons name="chevron-forward" size={24} color="gray" />
+  
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.desplegables}>
+          <View >
+            <Ionicons name="globe" size={24} color="gray" />
+            <Text style={{ marginLeft: 10 }}>Español (Latinoamérica)</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={24} color="gray" />
+        </TouchableOpacity>
+
+        {/* Opción con ícono de carrito y usuario */}
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 15 }}>
+          <TouchableOpacity>
+            <Ionicons name="cart" size={32} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Ionicons name="person" size={32} color="black" />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </ScrollView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding:20,
+    backgroundColor: '#D2B48C',
+    marginBottom:400,//con 400 hace un poquito de scroll para abajo, permite explayarse
+  },
+  Text_mayusculas:{
+    marginTop:200,
+    fontSize: 24, 
+    fontWeight: 'bold' 
+  },
+Text_normal:{
+  fontSize:18,
+   fontWeight:'bold', 
+},
+desplegables:{
+  flexDirection: 'row',
+   alignItems: 'center', 
+   padding: 15, 
+},
+  
+});
+
+
+
+export default Usuarios;
