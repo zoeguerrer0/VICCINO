@@ -8,15 +8,10 @@ export default function App() {
   return (  
     <ScrollView>
       <View style={styles.container}>
-        <Text style={{
-          marginTop:750,
-          justifyContent:"center",
-        }}>
-          holaaa, esta es una prueba
-
-        </Text>
-        <Navigation/>
-      </View>
+      
+        <Usuarios/>
+        
+             </View>
     </ScrollView>
   );
 }
