@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, ImageBackground, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, ImageBackground, Text, View, TouchableOpacity, Dimensions } from 'react-native';
 
 export default function Inicio() {
   const navigation = useNavigation();
@@ -29,8 +29,8 @@ export default function Inicio() {
         <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion}>
           <Text style={styles.buttonText}>Registrarse</Text>
         </TouchableOpacity>
-        </View>
-      </ImageBackground>
+      </View>
+    </ImageBackground>
   );
 }
 
@@ -53,11 +53,9 @@ const styles = StyleSheet.create({
 
   //},
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding:'auto',
-    },
+  },
   button: {
     backgroundColor: '#6F4E37',
     padding: 10,
@@ -72,10 +70,11 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 16,
   },
-  Text:{
-    color: '#000000', // Texto principal negro
+  Text: {
+    color: '#FFFF',
     fontSize: 30,
+    marginBottom: 650, // Ajusta este valor para controlar el espacio entre el texto y los botones
     letterSpacing: 4,
-  }
-
+    marginTop:30,
+  },
 });
