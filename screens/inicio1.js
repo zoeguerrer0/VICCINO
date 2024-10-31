@@ -1,7 +1,18 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, ImageBackground, Text, View, TouchableOpacity } from 'react-native';
 
 export default function Inicio() {
+  const navigation = useNavigation();
+
+  const manejoDeNavegacion1 = () => {
+    navigation.navigate("Login");
+  }
+
+  const manejoDeNavegacion = () => {
+    navigation.navigate("Registro");
+  }
+
   return (
     <ImageBackground
       source={require('../assets/fondo-inicio.png')}
@@ -11,11 +22,11 @@ export default function Inicio() {
           <Text style={styles.Text}>
             VICINO
           </Text>
-        <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')} >
-          <Text style={styles.buttonText}>Iniciar Sesión</Text>
+          <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion1}>
+          <Text style={styles.buttonText}> login</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')}>
+        <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion}>
           <Text style={styles.buttonText}>Registrarse</Text>
         </TouchableOpacity>
         </View>
@@ -25,15 +36,22 @@ export default function Inicio() {
 
 const styles = StyleSheet.create({
   background:{
-    flex:1,
-    reziceMode:'cover',
-    marginLeftft:'40%',
-    marginRight:'30%',
-    marginTop:'20px',
-    padding:'280px',
+  ...StyleSheet.absoluteFillObject,
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: 20,
+},
+
+  //{
+  //   flex:1,
+  //   reziceMode:'cover',
+  //   marginLeftft:'40%',
+  //   marginRight:'30%',
+  //   marginTop:'20px',
+  //   padding:'280px',
 
 
-  },
+  //},
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -48,6 +66,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: '80%',
     alignItems: 'center',
+    
   },
   buttonText: {
     color: '#FFF',

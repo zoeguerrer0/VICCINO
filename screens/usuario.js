@@ -10,7 +10,7 @@ function Usuario () {
                         textAlign: "center",
                         marginTop:"20%"
                     }}>
-                        holaa 
+                       
                     </Text>
                 </View>
             );
