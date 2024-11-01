@@ -4,7 +4,7 @@
     "slug": "vicino-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/favicon-vicino.png",
+    "icon": "assets/PantallaPiola.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -22,7 +22,7 @@
       }
     },
     "web": {
-      "favicon": "../assets/favicon-vicino.png"
+   
       
     }
   }

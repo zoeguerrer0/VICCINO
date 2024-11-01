@@ -1,18 +1,32 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, ImageBackground, Text, View, TouchableOpacity, Dimensions } from 'react-native';
 
 export default function Inicio() {
+  const navigation = useNavigation();
+
+  const manejoDeNavegacion1 = () => {
+    navigation.navigate("Login");
+  }
+
+  const manejoDeNavegacion = () => {
+    navigation.navigate("Registro");
+  }
+
   return (
     <ImageBackground
       source={require('../assets/fondo-inicio.png')}
       style={styles.background}
-    >
-      <View style={styles.container}>
-        <Text style={styles.Text}>VICINO</Text>
-        <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')} >
-          <Text style={styles.buttonText}>Iniciar Sesión</Text>
+      >
+        <View style={styles.container} >
+          <Text style={styles.Text}>
+            VICINO
+          </Text>
+          <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion1}>
+          <Text style={styles.buttonText}> login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => alert('Ingresando...')}>
+        
+        <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion}>
           <Text style={styles.buttonText}>Registrarse</Text>
         </TouchableOpacity>
       </View>
@@ -21,11 +35,23 @@ export default function Inicio() {
 }
 
 const styles = StyleSheet.create({
-  background: {
-    flex:1,
-    width: '100%',
-  
-  },
+  background:{
+  ...StyleSheet.absoluteFillObject,
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: 20,
+},
+
+  //{
+  //   flex:1,
+  //   reziceMode:'cover',
+  //   marginLeftft:'40%',
+  //   marginRight:'30%',
+  //   marginTop:'20px',
+  //   padding:'280px',
+
+
+  //},
   container: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -38,6 +64,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: '80%',
     alignItems: 'center',
+    
   },
   buttonText: {
     color: '#FFF',
