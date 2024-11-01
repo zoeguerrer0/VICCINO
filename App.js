@@ -1,12 +1,9 @@
 import React from "react";
 import { View, StyleSheet,ScrollView, Text } from "react-native";
 import Usuarios from "./screens/usuario";
-import Navigation from "./navegacion";
 import  { DataProvider } from "./src/componentes/DataContext";
 import { View, StyleSheet,ScrollView, Dimensions } from "react-native";
-import Nab from "./navigation/navegacion";
-//terminar de configurar la dimension de las pantallas
-//const {width, height}= Dimensions.get('window');
+//  terminar de configurar la dimension de las pantallas
 
 export default function App() {
   return (  
@@ -14,9 +11,10 @@ export default function App() {
       {/* bmnvm */}
         <ScrollView>
           <View style={styles.container}>
+            
+           <Usuarios/>
           
-            <Usuarios/>
-              </View>
+          </View>
         </ScrollView>
     </DataProvider>
   )
