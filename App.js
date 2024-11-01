@@ -19,9 +19,7 @@ export default function App() {
               </View>
         </ScrollView>
     </DataProvider>
-  return (
-    <Nab/>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
