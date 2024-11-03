@@ -1,26 +1,11 @@
 import React from "react";
-import { View, StyleSheet,ScrollView, } from "react-native";
-import Usuarios from "./screens/usuario";
-
+import 'react-native-gesture-handler';
+import MyStack from "./navegacion";
+import { NavigationContainer } from "@react-navigation/native";
 export default function App() {
-  return (  
-  
-        <ScrollView>
-          <View style={styles.container}>
-            
-           <Usuarios/>
-          
-          </View>
-        </ScrollView>
-
-  )
+  return (
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
-});

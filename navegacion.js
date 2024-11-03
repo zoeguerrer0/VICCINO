@@ -1,20 +1,30 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import envío from './screens/envío'
-import inicio  from './screens/inicio1';
-
+import React from "react";
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import envío from "./screens/envío";
+import Inicio from "./screens/inicio1";
+import RegistroScreen from "./screens/registro";
 const Stack = createNativeStackNavigator();
 
-const Nab = () => {
+export default function MyStack() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="inicio1">
-        <Stack.Screen name="inicio" component={inicio} options={{ title: 'inicio' }} />
-        <Stack.Screen name="envío" component={envío} options={{ title: 'Envío' }} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Inicio"
+        component={Inicio}
+        options={{ title: "Inicio" }}
+      />
+      <Stack.Screen
+        name="Registro"
+        component={RegistroScreen}
+        options={{ title: "Registro" }}
+      />
+      <Stack.Screen
+        name="envío"
+        component={envío}
+        options={{ title: "Envío" }}
+      />
+    </Stack.Navigator>
   );
-};
-
-export default Nab;
+}
