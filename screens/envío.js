@@ -33,8 +33,13 @@ const Envio = () => {
       <TouchableOpacity style={styles.nextButton} onPress={() => alert('Siguiente')}>
         <Text style={styles.nextButtonText}>Siguiente</Text>
       </TouchableOpacity>
+      <TouchableOpacity  style={styles.nextButton} onPress={() => Navigation.navigate("Login")}>
+
+        
+      </TouchableOpacity>
     </View>
   );
+
 };
 
 const styles = StyleSheet.create({

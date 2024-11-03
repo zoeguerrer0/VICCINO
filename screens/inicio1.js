@@ -5,11 +5,11 @@ import { StyleSheet, ImageBackground, Text, View, TouchableOpacity, Dimensions }
 export default function Inicio() {
   const navigation = useNavigation();
 
-  const manejoDeNavegacion1 = () => {
+  const navegarALogin = () => {
     navigation.navigate("Login");
   }
 
-  const manejoDeNavegacion = () => {
+  const navegarARegistros = () => {
     navigation.navigate("Registro");
   }
 
@@ -22,11 +22,11 @@ export default function Inicio() {
           <Text style={styles.Text}>
             VICINO
           </Text>
-          <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion1}>
+          <TouchableOpacity style={styles.button} onPress={navegarALogin}>
           <Text style={styles.buttonText}> login</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity style={styles.button} onPress={manejoDeNavegacion}>
+        <TouchableOpacity style={styles.button} onPress={navegarARegistros}>
           <Text style={styles.buttonText}>Registrarse</Text>
         </TouchableOpacity>
       </View>

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { View, StyleSheet, ImageBackground, Text, TextInput, TouchableOpacity } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
+import Login from "./loginscreen";
+import Product from "./producto";
 const RegistroScreen = () => {
+  const Navigation = useNavigation();
+
+  
   return (
     <View style={styles.container}>
       <ImageBackground source={require('../assets/PantallaPiola.jpg')} style={styles.imageBackground} resizeMode="cover">
@@ -11,11 +16,12 @@ const RegistroScreen = () => {
         <TextInput style={styles.input} placeholder="Ingrese su Gmail" placeholderTextColor="#000" keyboardType="email-address" />
         <TextInput style={styles.input} placeholder="Ingrese una Contraseña" placeholderTextColor="#000" secureTextEntry />
         <TextInput style={styles.input} placeholder="Confirme su Contraseña" placeholderTextColor="#000" secureTextEntry />
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Registrarse</Text>
+        <TouchableOpacity style={styles.button} onPress={()=>Navigation.navigate("Login")}>
+          <Text style={styles.buttonText} >login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Login</Text>
+        <TouchableOpacity style={styles.button} onPress={()=>Navigation.navigate("product")}>
+          {/* revisar navegación pantalla productos */}
+          <Text style={styles.buttonText}>siguiente</Text>
         </TouchableOpacity>
       </ImageBackground>
     </View>
