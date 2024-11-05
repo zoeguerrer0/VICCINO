@@ -1,14 +1,9 @@
 import React,  { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity} from 'react-native';
         import Inicio from './inicio1';
-        //imports para el firebase
-        import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
-        import {initializeApp}from  'firebase/app';
-        import firebaseConfig from '../firebase';
+        import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
         import { useNavigation } from '@react-navigation/native';
         export default function Login() {
-          const app=initializeApp(firebaseConfig);//inicializa la app
-          const auth =getAuth(app);//maneja la autenticacion del usuario
           const Navigation = useNavigation();//declaramos la navegacion para poder utilizarla abajo
 
           const [username, setUsername] = useState('');
