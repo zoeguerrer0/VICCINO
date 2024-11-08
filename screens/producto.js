@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, Button } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import { CurrentRenderContext } from '@react-navigation/native';
-export default function App() {
+import { Questrial_400Regular } from '@expo-google-fonts/questrial';
+export default function Producto() {
   const [selectedSize, setSelectedSize] = React.useState("S");
 
   return (
@@ -30,7 +31,7 @@ export default function App() {
       <Text style={styles.deliveryText}>Entrega estimada: el día que llegue el camión</Text>
       <View style={styles.iconContainer}>
         <Text>🛒</Text>
-        <Text>Vicino</Text>
+        <Text>VICINO</Text>
         <Text>👤</Text>
       </View>
     </View>
@@ -39,7 +40,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    
     flex: 1,
     padding: 20,
     backgroundColor: '#e2caad',
