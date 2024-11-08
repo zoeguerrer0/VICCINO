@@ -9,7 +9,7 @@ const DataProvider=({Children})=>{
         const productRepeat = cart.find((item)  => item.id === producto.id)
 
         if  (productRepeat) { //recorremos el carrito 
-            setCart0(cart.map((item)=>(item.id ===producto.id ? {...producto, quanty:productRepeat. quanty+1} : //si encuentra el item en el carrito le suma uno a su propiedad quanty(cuantificable), sino lo deja tal cual está el item
+            setCart0(cart.map((item)=>(item.id ===producto.id ? {...producto, quanty:productRepeat. quanty + 1} : //si encuentra el item en el carrito le suma uno a su propiedad quanty(cuantificable), sino lo deja tal cual está el item
                  item )));
             
         }

@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./screens/loginscreen";
 import Inicio from "./screens/inicio1";
 import RegistroScreen from "./screens/registro";
-import Product from "./screens/producto";
+import PruebaProd from "./src/componentes/avanceCarrito";
 const Stack = createNativeStackNavigator();
 
 export default function MyStack() {
@@ -29,7 +29,7 @@ export default function MyStack() {
       />
       <Stack.Screen
         name="Productos"
-        component={Product}
+        component={PruebaProd}
         options={{ title: "productos" }}
       />
     </Stack.Navigator>

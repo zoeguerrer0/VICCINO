@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { View, StyleSheet, ImageBackground, Text, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Login from "./loginscreen";
-import Product from "./producto";
 const RegistroScreen = () => {
   const Navigation = useNavigation();
 
@@ -19,7 +18,7 @@ const RegistroScreen = () => {
         <TouchableOpacity style={styles.button} onPress={()=>Navigation.navigate("Login")}>
           <Text style={styles.buttonText} >login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=>Navigation.navigate("product")}>
+        <TouchableOpacity style={styles.button} onPress={()=>Navigation.navigate("PruebaProd")}>
           {/* revisar navegación pantalla productos */}
           <Text style={styles.buttonText}>siguiente</Text>
         </TouchableOpacity>
