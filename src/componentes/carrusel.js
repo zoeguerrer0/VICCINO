@@ -17,7 +17,7 @@ const renderItem = ({ item }) => (
   </View>
 );
 
-const App = () => {
+const Carrusel = () => {
   return (
     <Carousel
       data={data}
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Carrusel;

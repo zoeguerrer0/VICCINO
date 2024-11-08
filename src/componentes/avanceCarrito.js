@@ -1,9 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, Button } from 'react-native';
+import { StyleSheet, View, Text, StatusBar } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
  
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-const productoss=()=>{
 
 const DATA = [
   {
@@ -19,17 +18,7 @@ const DATA = [
     title: 'Third Item',
   },
 ];
-/*return (
-  <View>
-    <Text>Productos</Text>
-    <FlatList
-    data={
-    DATA
-    } 
-    />
-  </View>
-)*/
-}
+
 
 const Item = ({title}) => (
   <View style={styles.item}>
@@ -37,7 +26,7 @@ const Item = ({title}) => (
   </View>
 );
 
-const pruebaProd = () => (
+const PruebaProd = () => (
   <SafeAreaProvider>
     <SafeAreaView style={styles.container}>
       <FlatList
@@ -68,4 +57,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default pruebaProd;
+export default PruebaProd;
