@@ -1,7 +1,10 @@
-import React from 'react';
-import { View, FlatList, Text, Image, StyleSheet } from 'react-native';
+import React, { useContext } from 'react';
+import { DataContext } from "../Context/DataContext.js";
+import { Pressable, View, FlatList, Text, Image, StyleSheet } from 'react-native';
 
-const Productos = [
+const Products =({ navigation }) => { // Agrega navigation como prop
+    const { buyProducts } = useContext(DataContext);
+    const productos = [
     {
         id: 1,
         productName: "Conjundo Candy",
@@ -53,22 +56,33 @@ const Productos = [
         price: 20500,
         img: require("../../../assets/arosTiana.png") 
         
-    }
+    },
     
     // Agrega más productos según sea necesario
-];
 
-const Products = () => {
+];
+const handleBuyPress = (product) => {
+    buyProducts(product);
+};
+const handleProductPress = (product) => {
+    navigation.navigate('ProductDetail', { product }); // Navega a la página de detalles del producto
+};
     return (
     <View style={styles.container}> 
             <FlatList
-                data={Productos}
+                data={productos}
                 renderItem={({ item }) => (
+                    <Pressable onPress={() => handleProductPress(item)}> {/* Agrega onPress aquí */}
+
                     <View style={styles.productItem}>
                         <Image source={item.img} style={styles.productImage} />
                         <Text style={styles.productName}>{item.productName}</Text>
                         <Text style={styles.productPrice}>$ {item.price}</Text>
+                        <Pressable style={styles.buyButton}><Text style={styles.buyButtonText}>Comprar</Text>
+</Pressable>
                     </View>
+                    </Pressable>
+
                 )}
                 keyExtractor={(item) => item.id.toString()}
                 numColumns={2} // Cambia este número para ajustar el número de columnas
@@ -82,6 +96,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop:70,
+        paddingBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#d9c2a7', 
@@ -90,6 +105,7 @@ const styles = StyleSheet.create({
     productItem: {
         flex: 1,
         margin: 10,
+        borderBottomWidth: 0,
         backgroundColor: '#fff',
         borderRadius: 5,
         padding: 80,
@@ -105,20 +121,34 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
     },
     productImage: {
-        width: '90%',
-        height: 120,
+        width: '100%',
+        height: 110,
         resizeMode: 'contain',
     },
     productName: {
         marginTop: 10,
         fontWeight: 'bold',
+        color: "black",
     },
     productPrice: {
         color: 'green',
     },
     row: {
         justifyContent: 'space-between',
+        marginBottom: 20,
     },
+    buyButton: {
+        backgroundColor: "#000",
+        padding: 8,
+        width: 150,
+        marginTop: 28,
+        borderRadius: 50,
+      },
+      buyButtonText: {
+        color: "white",
+        fontSize: 16,
+        textAlign: "center",
+      },
 });
 
 export default Products;
