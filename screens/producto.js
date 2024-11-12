@@ -1,6 +1,6 @@
-/*import React from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, Image, Button } from 'react-native';
-//import {Picker} from '@react-native-picker/picker';
+import {Picker} from '@react-native-picker/picker';
 import { CurrentRenderContext } from '@react-navigation/native';
 import { Questrial_400Regular } from '@expo-google-fonts/questrial';
 
@@ -82,5 +82,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 20,
-  }
+  },
+  productName: {
+    marginTop: 10,
+    fontWeight: 'bold',
+    fontSize: 20,
+},
+productPrice: {
+    color: 'green',
+    fontSize: 18,
+},
 });
+export default ProductDetail;
