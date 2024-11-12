@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, ImageBackground, Text, View, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, ImageBackground, Text, View, TouchableOpacity } from 'react-native';
 
 export default function Inicio() {
   const navigation = useNavigation();
@@ -15,7 +15,7 @@ export default function Inicio() {
 
   return (
     <ImageBackground
-      source={require('../assets/fondo-inicio.png')}
+      source={('../assets/fondo-inicio.png')}
       style={styles.background}
       >
         <View style={styles.container} >

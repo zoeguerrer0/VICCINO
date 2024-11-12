@@ -1,7 +1,7 @@
 import React,  { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity} from 'react-native';
-        import Inicio from './inicio1';
-        import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+        import {auth} from '../firebase';
+//        import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
         import { useNavigation } from '@react-navigation/native';
         export default function Login() {
           const Navigation = useNavigation();//declaramos la navegacion para poder utilizarla abajo

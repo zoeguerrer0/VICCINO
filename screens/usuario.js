@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView,StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // O cualquier otra biblioteca de iconos
 
-function Usuario () {
+/*function Usuario () {
             return (
                 <View>
                     <Text
@@ -17,7 +17,7 @@ function Usuario () {
             );
         };
 
- export default Usuario;       
+ export default Usuario;*/       
 const Usuarios = () => {
   return (
     <ScrollView >
@@ -88,4 +88,4 @@ desplegables:{
 
 
 
-//export default Usuarios;
+export default Usuarios;

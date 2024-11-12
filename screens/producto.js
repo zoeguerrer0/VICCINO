@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { StyleSheet, View, Text, Image, Button } from 'react-native';
 //import {Picker} from '@react-native-picker/picker';
 import { CurrentRenderContext } from '@react-navigation/native';
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 20,
   }
-});
+});*/
