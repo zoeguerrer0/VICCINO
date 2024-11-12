@@ -1,22 +1,19 @@
-/*import React from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, Image, Button } from 'react-native';
-//import {Picker} from '@react-native-picker/picker';
+import {Picker} from '@react-native-picker/picker';
 import { CurrentRenderContext } from '@react-navigation/native';
-export default function Product() { 
-  //cambié el nombre de la función: App=> Product
+import { Questrial_400Regular } from '@expo-google-fonts/questrial';
 
-  const [selectedSize, setSelectedSize] = React.useState("S");
+const ProductDetail = ({ route }) => {
+  const { product } = route.params; // Obtén el producto de los parámetros de la ruta
 
   return (
     <View style={styles.container}>
-      <Image 
-        source={{uri: '../assets/candyconjunto.jpg'}} 
-        style={styles.productImage} 
-      />
+      <Image source={product.img} style={styles.productImage}/>
       <Text style={styles.seasonText}>Nueva temporada</Text>
-      <Text style={styles.brandText}>Esteban Pizzino</Text>
+      <Text style={styles.productName}>{product.productName}</Text>
       <Text style={styles.productTitle}>Conjunto aros + alianzas Candy</Text>
-      <Text style={styles.priceText}>$12,600 (iva incluido)</Text>
+      <Text style={styles.productPrice}>$ {product.price}</Text>
       <Picker
         selectedValue={selectedSize}
         style={styles.picker}
@@ -32,7 +29,7 @@ export default function Product() {
       <Text style={styles.deliveryText}>Entrega estimada: el día que llegue el camión</Text>
       <View style={styles.iconContainer}>
         <Text>🛒</Text>
-        <Text>Vicino</Text>
+        <Text>VICINO</Text>
         <Text>👤</Text>
       </View>
     </View>
@@ -41,15 +38,14 @@ export default function Product() {
 
 const styles = StyleSheet.create({
   container: {
-    
     flex: 1,
     padding: 20,
     backgroundColor: '#e2caad',
   },
   productImage: {
-    width: 400,
-    height: 400,
-    resizeMode: 'cover',
+    width: '100%',
+    height: 200,
+    resizeMode: 'contain',
   },
   seasonText: {
     marginTop: 10,
@@ -86,5 +82,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 20,
-  }
-});*/
+  },
+  productName: {
+    marginTop: 10,
+    fontWeight: 'bold',
+    fontSize: 20,
+},
+productPrice: {
+    color: 'green',
+    fontSize: 18,
+},
+});
+export default ProductDetail;
