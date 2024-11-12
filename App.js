@@ -6,7 +6,6 @@ import { NavigationContainer } from "@react-navigation/native";
 export function App() {
   return (
     <NavigationContainer>
-      <ModalComponent />
       <Nab />
     </NavigationContainer>
   );
